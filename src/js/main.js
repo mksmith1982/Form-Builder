@@ -45,9 +45,11 @@ function getData(form_data, status , requestObject) {
 			// end if type = select
 		} else {  
 			// else type != select
-			var label = `<label>${form_data[i].label}:</label>`;
+
+			var label = `<label class = label>${form_data[i].label}:</label>`;
 			var icon  = `<i class = "fa ${form_data[i].icon}"> </i>`;
 			var input = `<input type = "${form_data[i].type}" id = "${form_data[i].id}"/>`;
+
 
 			// add the label, icon & input element
 			$("#myform").append(label);

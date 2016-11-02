@@ -1,105 +1,236 @@
+
+@mixin inputline{
+  width:380px;
+  height:50px;
+  display:flex;
+  align-content: center;
+}
+
+
+
 * {
   box-sizing: border-box;
 }
 
 .container {
-  margin: 90px 30px;
-  width: 535px;
-  height: 660px;
-  border: 2px solid lightgrey;
+    margin: 90px 30px;
+    width: 535px;
+    height: 660px;
+    border: 2px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-#formcontainer {
-  padding-left: 25px;
-  padding-right: 25px;
-
-}
-
-.container header {
-  height: 75px;
-  margin-left: -25px;
-  margin-bottom: 26px;
-  margin-right: -25px;
-  background-color: #468CC8;
-  padding: 20px;
-  font-size: 25px;
-  font-weight: lighter;
-  color: white;
-
-
+.header{
+    height: 80px;
+    width: 533px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    border: 2px solid;
+    justify-content: center;
+    align-items: center;
+    background: blue;
 
 }
-.select {
-  margin: 5px;
-  height: 35px;
-}
-.form {
-  margin: 8px;
-  margin-left: 0px;
-  margin-right: 0px;
-  height: 35px;
-  width: 484px;
-  font-size: 11px;
-  padding-left: 30px;
-  border-radius: 3px;
-  border: 1px solid lightgrey;
+#myform {
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 500px;
+
 }
 
-.dropmenu {
-  -webkit-appearance: menulist-button;
-  margin: 8px;
-  margin-left: 0px;
-  margin-right: 0px;
-  height: 35px;
-  width: 484px;
-  font-size: 12px;
-  list-style: none;
-  background-color: transparent;
-  font-color: lightgrey;
+button{
+  position:relative;
+  top:550px;
+  left:400px;
 }
 
- #user-comment {
-  height: 80px;
-  border: 1px solid lightgrey;
-  border-radius: 2px;
-  padding-top: 12px;
-  padding-right: 12px;
+#user-first-name{
+  @include inputline;
+  position:relative;
+  left:100px;
+
 }
+    .fa-user{
+      position:relative;
+      left:71px;
+      top:23px;
+    }
+
+#user-last-name{
+@include inputline;
+position:relative;
+left:100px;
+}
+
+#user-email{
+  width: 350px;
+  height: 50px;
+  display: flex;
+  /* align-content: center; */
+  position: relative;
+  left: 130px;
+  }
+      .fa-envelope{
+        position: relative;
+        top: 24px;
+        left: 102px;
+      }
+
+#user-website{
+@include inputline;
+position: relative;
+left:100px;
+}
+  .fa-globe{
+    position: relative;
+    left:73px;
+    top:24px;  
+  }
+
+#user-language{
+  width:250px;
+  height:50px;
+  position: relative;
+  left:130px;
+
+}
+
+#user-comment{
+@include inputline;
+height:100px;
+}
+    .fa-comments{
+      position: relative;
+      right:27px;
+      top:20px;
+    }
+#user-mobile{
+@include inputline;
+}
+    .fa-mobile-phone{
+      position: relative;
+      right:27px;
+      top:28px;
+    }
+
+#user-phone{
+@include inputline;
+}
+  .fa-phone{
+    position: relative;
+    right: 27px;
+    top:28px;
+  }
+
+.label{
+      display: flex;
+    align-items: stretch;
+    position: relative;
+    right: 39px;
+    top: 10px;
+
+}
+label{
+  position:relative;
+  // left:0px;
+  right:40px;
+}
+
+// #input{
+//   position:relative;
+//   top:0px;
+//   right:0px;
+// }
+// .container header {
+//   height: 75px;
+//   margin-left: -25px;
+//   margin-bottom: 26px;
+//   margin-right: -25px;
+//   background-color: #468CC8;
+//   padding: 20px;
+//   font-size: 25px;
+//   font-weight: lighter;
+//   color: white;
+
+
+
+// }
+// .select {
+//   margin: 5px;
+//   height: 35px;
+// }
+// .form {
+//   margin: 8px;
+//   margin-left: 0px;
+//   margin-right: 0px;
+//   height: 35px;
+//   width: 484px;
+//   font-size: 11px;
+//   padding-left: 30px;
+//   border-radius: 3px;
+//   border: 1px solid lightgrey;
+// }
+
+// .dropmenu {
+//   -webkit-appearance: menulist-button;
+//   margin: 8px;
+//   margin-left: 0px;
+//   margin-right: 0px;
+//   height: 35px;
+//   width: 484px;
+//   font-size: 12px;
+//   list-style: none;
+//   background-color: transparent;
+//   font-color: lightgrey;
+// }
+
+//  #user-comment {
+//   height: 80px;
+//   border: 1px solid lightgrey;
+//   border-radius: 2px;
+//   padding-top: 12px;
+//   padding-right: 12px;
+// }
 
 .inputLine{
   margin: 0px;
   position: relative;
-
-  i {
-    color: lightgrey;
-    display: inline-block;
-    position: absolute;
-    top: 20px;
-    left: 10px;
-    height: 2px;
-    font-size: 12px;
-  }
 }
-#user-phone {
-  margin-bottom: 15px;
-}
+  // i {
+  //   color: lightgrey;
+  //   display: inline-block;
+  //   position: absolute;
+  //   top: 20px;
+  //   left: 10px;
+  //   height: 2px;
+  //   font-size: 12px;
+  // }
+// }
+// #user-phone {
+//   margin-bottom: 15px;
+// }
 
-#submitbar {
-  background-color: #CADEEF;
-  height: 75px;
-  width: 531px;
-  margin-right: 0px;
-  margin-top: 16px;
-  padding: 20px;
+// #submitbar {
+//   background-color: #CADEEF;
+//   height: 75px;
+//   width: 531px;
+//   margin-right: 0px;
+//   margin-top: 16px;
+//   padding: 20px;
 
-  .submit {
-    height: 35px;
-    width: 100px;
-    background-color: #468CC8;
-    color: white;
-    font-size: 12px;
-    border-style: none;
-    border-radius: 2px;
+  // .submit {
+  //   height: 35px;
+  //   width: 100px;
+  //   background-color: #468CC8;
+  //   color: white;
+  //   font-size: 12px;
+  //   border-style: none;
+  //   border-radius: 2px;
 
-  }
-}
+  // }
+// }
